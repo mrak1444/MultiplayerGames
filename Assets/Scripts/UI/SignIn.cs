@@ -14,6 +14,7 @@ public class SignIn : MonoBehaviour
     [SerializeField] private InputField _inputFieldPassword;
     [SerializeField] private GameObject _objStart;
     [SerializeField] private GameObject _objLoadingIcon;
+    [SerializeField] private InfoUser _infoUser;
 
     private string _username;
     private string _userPass;
@@ -38,8 +39,11 @@ public class SignIn : MonoBehaviour
             Password = _userPass
         }, result =>
         {
-            _objLoadingIcon.SetActive(false);
+            //_objLoadingIcon.SetActive(false);
             Debug.Log($"Success: {_username}");
+            _infoUser.gameObject.SetActive(true);
+            _infoUser.Run();
+            gameObject.SetActive(false);
         }, error =>
         {
             _objLoadingIcon.SetActive(false);
