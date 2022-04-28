@@ -14,6 +14,7 @@ public class CreateAccount : MonoBehaviour
     [SerializeField] private InputField _inputFieldPassword;
     [SerializeField] private InputField _inputFieldEmail;
     [SerializeField] private GameObject _objStart;
+    [SerializeField] private GameObject _objLoadingIcon;
 
     private string _username;
     private string _userMail;
@@ -32,6 +33,7 @@ public class CreateAccount : MonoBehaviour
 
     private void ButonSignIn()
     {
+        _objLoadingIcon.SetActive(true);
         PlayFabClientAPI.RegisterPlayFabUser(new RegisterPlayFabUserRequest
         {
             Username = _username,
@@ -40,9 +42,11 @@ public class CreateAccount : MonoBehaviour
             RequireBothUsernameAndEmail = true
         }, result =>
         {
+            _objLoadingIcon.SetActive(false);
             Debug.Log($"Success: {_username}");
         }, error =>
         {
+            _objLoadingIcon.SetActive(false);
             Debug.LogError($"Fail: {error.ErrorMessage}");
         });
     }

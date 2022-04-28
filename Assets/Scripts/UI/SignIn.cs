@@ -13,6 +13,7 @@ public class SignIn : MonoBehaviour
     [SerializeField] private InputField _inputFieldUsername;
     [SerializeField] private InputField _inputFieldPassword;
     [SerializeField] private GameObject _objStart;
+    [SerializeField] private GameObject _objLoadingIcon;
 
     private string _username;
     private string _userPass;
@@ -30,15 +31,18 @@ public class SignIn : MonoBehaviour
 
     private void ButonSignIn()
     {
+        _objLoadingIcon.SetActive(true);
         PlayFabClientAPI.LoginWithPlayFab(new LoginWithPlayFabRequest
         {
             Username = _username,
             Password = _userPass
         }, result =>
         {
+            _objLoadingIcon.SetActive(false);
             Debug.Log($"Success: {_username}");
         }, error =>
         {
+            _objLoadingIcon.SetActive(false);
             Debug.LogError($"Fail: {error.ErrorMessage}");
         });
     }
