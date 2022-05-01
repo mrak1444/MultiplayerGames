@@ -1,0 +1,280 @@
+{
+  "CatalogVersion": "1",
+  "Catalog": [
+    {
+      "ItemId": "little_sword",
+      "ItemClass": "weapon",
+      "CatalogVersion": "1",
+      "DisplayName": "Little sword",
+      "Description": "Deals 5 damage",
+      "VirtualCurrencyPrices": {
+        "RM": 10,
+        "GD": 50
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [],
+      "CustomData": "{\"damage\":\"5\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": "",
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "big_sword",
+      "ItemClass": "weapon",
+      "CatalogVersion": "1",
+      "DisplayName": "Big sword",
+      "Description": "Deals 10 damage",
+      "VirtualCurrencyPrices": {
+        "RM": 20,
+        "GD": 100
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [],
+      "CustomData": "{\"damage\":\"10\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "little_shield",
+      "ItemClass": "weapon",
+      "CatalogVersion": "1",
+      "DisplayName": "Little shield",
+      "Description": "Protection 5 damage",
+      "VirtualCurrencyPrices": {
+        "RM": 12,
+        "GD": 60
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [],
+      "CustomData": "{\"protection\":\"5\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "big_shield",
+      "ItemClass": "weapon",
+      "CatalogVersion": "1",
+      "DisplayName": "Big shield",
+      "Description": "Protection 10 damage",
+      "VirtualCurrencyPrices": {
+        "RM": 22,
+        "GD": 110
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [],
+      "CustomData": "{\"protection\":\"10\"}",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "small_health_potion",
+      "ItemClass": "health",
+      "CatalogVersion": "1",
+      "DisplayName": "Small Health Potion",
+      "Description": "Restores 5 health. 2 pieces",
+      "VirtualCurrencyPrices": {
+        "RM": 7,
+        "GD": 20
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [],
+      "CustomData": "{\"health\":\"5\"}",
+      "Consumable": {
+        "UsageCount": 2,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "major_health_potion",
+      "ItemClass": "health",
+      "CatalogVersion": "1",
+      "DisplayName": "Major Health Potion",
+      "Description": "Restores 5 health. 5 pieces",
+      "VirtualCurrencyPrices": {
+        "RM": 17,
+        "GD": 50
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [],
+      "CustomData": "{\"health\":\"5\"}",
+      "Consumable": {
+        "UsageCount": 5,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "Little_bundles",
+      "ItemClass": null,
+      "CatalogVersion": "1",
+      "DisplayName": "Small set",
+      "Description": "Small set",
+      "VirtualCurrencyPrices": {
+        "RM": 100,
+        "GD": 300
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": {
+        "BundledItems": [
+          "little_sword",
+          "little_shield",
+          "small_health_potion"
+        ],
+        "BundledResultTables": [],
+        "BundledVirtualCurrencies": null
+      },
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "Big_bundles",
+      "ItemClass": null,
+      "CatalogVersion": "1",
+      "DisplayName": "Big set",
+      "Description": "Big set",
+      "VirtualCurrencyPrices": {
+        "RM": 200,
+        "GD": 500
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": {
+        "BundledItems": [
+          "big_sword",
+          "big_shield",
+          "major_health_potion"
+        ],
+        "BundledResultTables": [],
+        "BundledVirtualCurrencies": null
+      },
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "Con_1",
+      "ItemClass": null,
+      "CatalogVersion": "1",
+      "DisplayName": "Container #1",
+      "Description": "Container #1",
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": null,
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": {
+        "KeyItemId": null,
+        "ItemContents": [
+          "big_sword"
+        ],
+        "ResultTableContents": [],
+        "VirtualCurrencyContents": {
+          "GD": 50
+        }
+      },
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    }
+  ],
+  "DropTables": []
+}
