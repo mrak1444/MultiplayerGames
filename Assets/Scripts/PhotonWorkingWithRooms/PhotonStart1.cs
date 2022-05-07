@@ -14,15 +14,20 @@ public class PhotonStart1 : MonoBehaviour, ILobbyCallbacks, IConnectionCallbacks
     [SerializeField] private Button _createRoom;
     [SerializeField] private InputField _roomName;
     [SerializeField] private Text _textInfo;
+    [SerializeField] private Button _closeRoom;
 
     private LoadBalancingClient _lbc;
     private TypedLobby _customLobby = new TypedLobby("customLobby", LobbyType.Default);
     private Dictionary<string, RoomInfo> _cachedRoomList = new Dictionary<string, RoomInfo>();
+    private bool _flag = false;
 
     private void Start()
     {
         _createRoom.onClick.AddListener(CreateRoom);
         _createRoom.interactable = false;
+
+        _closeRoom.onClick.AddListener(CloseRoom);
+        _closeRoom.interactable = false;
 
         _loadIcon.SetActive(true);
 
@@ -40,6 +45,8 @@ public class PhotonStart1 : MonoBehaviour, ILobbyCallbacks, IConnectionCallbacks
         _lbc.Service();
 
         var state = _lbc.State.ToString();
+
+        if (_flag && !_lbc.CurrentRoom.IsOpen) _textInfo.text = "Room is close";
     }
 
     private void UpdateCachedRoomList(List<RoomInfo> roomList)
@@ -93,6 +100,12 @@ public class PhotonStart1 : MonoBehaviour, ILobbyCallbacks, IConnectionCallbacks
         enterRoomParams.RoomName = _roomName.text;
         enterRoomParams.RoomOptions = roomOptions;
         _lbc.OpCreateRoom(enterRoomParams);
+    }
+
+    private void CloseRoom()
+    {
+        _lbc.CurrentRoom.IsOpen = false;
+        
     }
 
     public void OnConnected()
@@ -171,12 +184,15 @@ public class PhotonStart1 : MonoBehaviour, ILobbyCallbacks, IConnectionCallbacks
     public void OnJoinedRoom()
     {
         _textInfo.text = "JoinedRoom!";
+        _closeRoom.interactable = true;
+        _createRoom.interactable = false;
+        _flag = true;
         Debug.Log("14");
     }
 
     public void OnJoinRoomFailed(short returnCode, string message)
     {
-        Debug.Log("15");
+        _textInfo.text = "Join Room Failed";
     }
 
     public void OnJoinRandomFailed(short returnCode, string message)
