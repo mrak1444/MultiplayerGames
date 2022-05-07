@@ -13,6 +13,7 @@ public class PhotonStart1 : MonoBehaviour, ILobbyCallbacks, IConnectionCallbacks
     [SerializeField] private List<Text> _buttonsText;
     [SerializeField] private Button _createRoom;
     [SerializeField] private InputField _roomName;
+    [SerializeField] private Text _textInfo;
 
     private LoadBalancingClient _lbc;
     private TypedLobby _customLobby = new TypedLobby("customLobby", LobbyType.Default);
@@ -78,7 +79,9 @@ public class PhotonStart1 : MonoBehaviour, ILobbyCallbacks, IConnectionCallbacks
 
     private void ClickButtons(RoomInfo rm)
     {
-        Debug.Log($"{rm.Name}");
+        EnterRoomParams enterRoomParams = new EnterRoomParams();
+        enterRoomParams.RoomName = rm.Name;
+        _lbc.OpJoinRoom(enterRoomParams);
     }
 
     private void CreateRoom()
@@ -167,6 +170,7 @@ public class PhotonStart1 : MonoBehaviour, ILobbyCallbacks, IConnectionCallbacks
 
     public void OnJoinedRoom()
     {
+        _textInfo.text = "JoinedRoom!";
         Debug.Log("14");
     }
 
