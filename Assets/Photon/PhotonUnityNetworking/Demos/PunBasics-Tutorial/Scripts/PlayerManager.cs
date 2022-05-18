@@ -168,7 +168,7 @@ namespace Photon.Pun.Demo.PunBasics
                 return;
             }
 
-            this.Health -= 0.1f;
+            this.Health -= 1f;
         }
 
         /// <summary>
@@ -192,7 +192,8 @@ namespace Photon.Pun.Demo.PunBasics
             }
 
             // we slowly affect health when beam is constantly hitting us, so player has to move to prevent death.
-            this.Health -= 0.1f*Time.deltaTime;
+            this.Health -= 1f*Time.deltaTime;
+
         }
 
 
