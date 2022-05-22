@@ -1,9 +1,7 @@
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using System;
 using Photon.Pun.Demo.PunBasics;
 using PlayFab;
 using PlayFab.ClientModels;
