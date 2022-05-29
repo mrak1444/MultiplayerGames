@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
   DevAccountEmail: mrak1444@mail.ru
-  DevAccountToken: faw97t78rhbs15ippqmz3t9g3ckof19kdwsccszoo468as3kaep9q6tcs4kxm65aom5oqij4u5hjeg3mgyi5szcdrwougu7aytoh5wzydsg69knmyui6huifxi768bgogt8dk6haa6xnoank76xzmcax4go4zrc3bt3wep63ptuqktkmgjy8tq1so5eerswmz9mg99s5
+  DevAccountToken: 8dpa5k1tmzeootu7b51n6w7bbkew8q7ftk11ot9tpnp6xa61odzd3igfuzg7jxrsmoq8667zidzqd5paaifd577xdqdgbd7t5en1anthgimwruymrjhxtzrjk6wjdjkedobtypq6kb3afo4c8wwzdm9kgac4hh83gisizrbgh8g7or98z5f6p83a73h8m6cmnw8aosbu
   SelectedStudio: Algazin Game Studio
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
